@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .banner{
+            width: 1400px;
+            height:75vh;
+            background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(./banner.jpg);
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .content{
+            width: 100%;
+            position: absolute;
+            top:40%;
+            transform: translateY(-50%);
+            text-align: center;
+            color:white;
+            font-family: sans-serif;
+        } 
+        .navbar{
+            display: flex; 
+            justify-content: space-between;
+            font-family: sans-serif;
+            align-content: center;
+            /* position: fixed; */
+
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* position: fixed;
+            background-color: aliceblue; */
+        }
+        .list_container ul{
+            display: flex; 
+            justify-content: space-between;
+            align-items: right;
+        }
+        .list_container ul li {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .list_container ul li a{
+            text-decoration: none;
+            padding: 10px;
+            margin-top: 0;
+            color: black;
+            font-size: x-small;
+            font-weight: bold;
+            margin-left: 40px;;
+            
+
+        }
+        .main{
+            text-align: center;
+            font-family: sans-serif;
+            margin-top: 40px;
+        }
+        .section{
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 40px;
+            display: flex;
+        }
+        .card1{
+            background-color:   #69c6ba;
+            margin-top: 110px;
+            margin-right: 50px;
+            border: none;
+            padding: 10px 50px;
+            position: relative;
+            margin-left: 46%;
+            color: white;
+            font-family: sans-serif;
+
+        }
+        .section img{
+          position:absolute;
+
+
+        }
+        .section1 img{
+            float: right;
+            margin-top: 150px;
+            margin-right: 62px;
+        }
+
+        .section2 img{
+            position: absolute;
+             margin-top: 120px; 
+             margin-left: 50px; 
+        }
+        a:active {
+          background-color: palevioletred;
+        }
+
+        .pravalika{
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+          display: flex;
+          align-items: stretch;
+          justify-content: space-around;
+          margin-bottom: 25px;
+        }
+
+        image{
+          vertical-align: middle;
+          border-style: none;
+        }
+
+        .title{
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        .box{
+          background-color: #69c6ba;
+    background-image: url(./button-curve.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    width: 300px;
+    transition: all 0.3s ease;
+        }
+
+        .manu{
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+          display: flex;
+          align-items: stretch;
+          justify-content: space-around;
+          margin-bottom: 25px;
+        }
+
+        .image1{
+          vertical-align: middle;
+          border-style: none;
+        }
+
+        .prion{
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+          display: flex;
+          align-items: stretch;
+          justify-content: space-around;
+          margin-bottom: 25px;
+        }
+        .image2{
+          vertical-align: middle;
+          border-style: none;
+        }
+
+        .lorem{
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+          display: flex;
+          align-items: stretch;
+          justify-content: space-around;
+          margin-bottom: 25px;
+        }
+        .image3{
+          vertical-align: middle;
+          border-style: none;
+        }
+
+        .button{
+          text-align: center;
+          font-family: sans-serif;
+        } 
+        @media (max-width: 768px) {
+    .banner {
+        width: 100%;
+        height: 50vh;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .content {
+        top: 30%; /* Adjust position for smaller screens */
+        font-size: small; /* Smaller font for mobile */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;
+    }
+
+    .list_container ul {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: center;
+    }
+
+    .list_container ul li {
+        margin: 10px 0; /* Space between links */
+    }
+
+    .section {
+        flex-direction: column; /* Stack items vertically */
+        margin: 20px; /* Reduced margin */
+    }
+
+    .card1 {
+        margin-left: 0; /* Remove left margin for mobile */
+        margin-right: 0; /* Remove right margin for mobile */
+        padding: 20px; /* Adjust padding */
+    }
+    .card2 {
+        margin-left: 0; /* Remove left margin for mobile */
+        margin-right: 0; /* Remove right margin for mobile */
+        padding: 20px; /* Adjust padding */
+        
+    }
+    .card3 {
+        margin-left: 0; /* Remove left margin for mobile */
+        margin-right: 0; /* Remove right margin for mobile */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .section img {
+        width: 100%; /* Make images responsive */
+        height: auto;
+        position: relative; /* Change to relative for better control */
+    }
+    .section1 img{
+      width: 100%; /* Make images responsive */
+        height: 100px;
+        position: relative; /* Change to relative for better control */
+
+    }
+    .section2 img{
+      width: 100%; /* Make images responsive */
+        height: auto;
+        position: relative; /* Change to relative for better control */
+    
+    }
+
+    .button {
+        margin-top: 20px; /* Adjust margin */
+    }
+
+    .map {
+        width: 100%; /* Full width for the map */
+        margin-left: 0; /* Reset left margin */
+    }
+
+    .form {
+        width: 90%; /* Adjust form width */
+        top: 50px; /* Adjust position */
+    }
+}
+
+@media (max-width: 480px) {
+    .content h2 {
+        font-size: large; /* Increase heading size for smaller devices */
+    }
+
+    .main p {
+        font-size: x-small; /* Adjust paragraph size */
+    }
+
+    .card-title {
+        font-size: medium; /* Adjust card title size */
+    }
+
+    .card-text {
+        font-size: x-small; /* Adjust card text size */
+    }
+
+    .button button {
+        width: 100%; /* Full width for buttons */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div style="display: flex;">
+                <img src="./logo.png" alt="">
+            <h1>JOURNEY</h1>
+        </div>
+        <div class="list_container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Top Destinations</a></li>
+                <li><a href="#">Recommended Places</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <header>
+        <div class="banner">
+            <div class="content">
+                <h2>LET'S BEGIN</h2>
+                <p><img src="./dots-3.png" alt=""></p>
+                <p>We assist you to choose the best.</p>
+                <p style="background-color: #69c6ba; border-radius: 90px; width: 30px; height: 30px; margin-left: 49%; text-align: center;">&#8897</p>
+            </div>
+            <div class="form">
+              <form action="index.html" style="position:relative; top: 300px; background-color: white; width: 600px;height: 200px; margin-left: 35%; ">
+                <fieldset>
+                  <div class="hello" style="display: flex; justify-content: space-around; align-content: center; margin-top: 30px;">
+                  <div>
+                <label for="destination" style="font-size: small; margin-left: -20px;"><b>Choose Your Destination</b></label><br>
+                <input type="text" id="destination" placeholder="Type your destination..." style="border-style: none; font-size: small;"><br><br>
+              </div>
+              <div>
+                <label for="rooms" style="font-size: small;"><b>How many rooms?</b></label><br>
+            <select id="rooms" style="border-style: none; text-align: center; font-size: small;">
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+            </select>
+          </div>
+          <div>
+            <label for="adults" style="font-size: small;"><b>Adult</b></label><br>    
+            <select id="adults" style="border-style: none; text-align: center; font-size: small;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+          </div>
+          <div>
+            <label for="children" style="font-size: small;"><b>Children</b></label><br>
+            <select id="children" style="border-style: none; text-align: center; font-size: small;">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+          </div>
+                  </div>
+           <div style="display: flex; justify-content: space-around;">       
+           <div> <label for="checkin" style="font-size: small; border-style: none; text-align: center; "><b>Check In Date</b></label><br>
+            <input type="text" id="checkin"placeholder="Check In" style="font-size: small; border-style: none;"></div>
+            <div>
+            <label for="checkout" style="font-size: small;"><b>Check Out Date</b></label><br>
+            <input type="text" id="checkout" placeholder="Check Out" style="border-style: none; font-size: small;">
+          </div>
+          <div>
+            <button class="check-availability" style="margin-top: 20px; width: 200px; padding: 5px 10px; margin-right: 20px; background-color: #69c6ba; color: white; font-size: small; border-style: none;">CHECK AVAILABILITY</button>
+          </div>
+        </div>
+          </fieldset>
+
+              </form>
+            </div>
+          </div>
+    </header>
+    <main>
+
+        <div class="main">
+            <p>YOUR <span style="font-size: bold;">JOURNEY </span>IS OUR PRIORITY</p>
+            <p style="font-size:xx-small;">Nullam auctor,sapien sit amet lacinia euismod,lorem magna lobortis massa,in tinciduntnmi metus quis lectus.Duis nec lobortis velit.Vivamus<br> Id magna vulputate,tempor ante eget,tempus augue.Maecenas utlricies neque magna</p>
+            <button style="background-color: #69c6ba; color: aliceblue; font-size: x-small; border: none; padding:10px 20px; text-align: center; text-decoration: none; ">CONTINUE EXPLORE</button>
+        </div>
+
+    </main> 
+
+    <section class="section" style="background-color: white;">
+      <img src="./tm-img-01.jpg" alt="">
+      
+      </div>
+        <div class="card1" >
+            <div class="row g-0">
+              </div>
+              <div class="mt-5">
+                <div class="card-body">
+                  <h5 class="card-title">Europe's most visited places</h5>
+                  <p class="card-text">Aenean in lacus nec dolor fermentum congue. Maecenas ut velit pharetra,pharetra tortor sit amet,vulputate sem.Vestibulum mi nibh,faucibus ac eros id,sagittis tincidunt velit.Proin interdum ullamcorper faucibus. Ut mi nunc, sollicitudin non pulvinar id, sagittis eget diam</p>
+                  <button class="card-text btn btn" style="background-color: white; color: #69c6ba ; border: soloid;">CONTINUE READING</button>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+
+    <section class="section1" style="background-color: white;">
+      
+        <img src="./tm-img-02.jpg" alt="">
+        <div class="card3" >
+            <div class="row g-0">
+              </div>
+              <div class="mt-5">
+                <div class="card-body" style="margin-top: 300px; border: none; background-color: palevioletred; position: relative; margin-left: 40px; margin-right: 48%; padding: 40px 30px; color: white;">
+                  <h5 class="card-title">Asia's most popular palces</h5>
+                  <p class="card-text">Vivamus in massa ullamcorper nunc auctor accumsan ac at arcu. Donec sagittis mattis pharetra. Proin commodo, ante et volutpat pulvinar, arcu arcu ullamcorper diam, id maximus sem tellus id sem. Suspendisse eget rhoncus diam. Fusce urna elit, porta nec üllamcorper id.</p>
+                  <button class="card-text btn btn" style="background-color: white; color: palevioletred; border: soloid;">CONTINUE READING</button>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </section>
+
+    <section class="section2" style="background-color: white;">
+        <img src="./tm-img-03.jpg" alt="">
+          <div>
+        <div class="card2" >
+            <div class="row g-0">
+              </div>
+              <div class="mt-5">
+                <div class="card-body" style="background-color: #69c6ba; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 13px;padding:50px 55px; color: white; margin-left: 48%; margin-right: 40px; margin-top: 300px; position: relative;">
+                  <h5 class="card-title">America's most famous places</h5>
+                  <p class="card-text">Donec nec laoreet diam, at vehicula ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse nec dapibus nunc, quis viverra metus. Morbi eget diam gravida, euismod magna vel, tempor urna.</p>
+                  <button class="card-text btn btn" style="background-color: white; color: #69c6ba ; border: soloid;">CONTINUE READING</button>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+        <ul class="nav nav-pills" style="dispaly:flex; align-items: stretch; justify-content: space-evenly;  background-color: #69c6ba; height: auto; margin-top: 83px; margin-left: 50px; margin-right: 50px;">
+            <li class="nav-item">
+              <a class="nav-link"  href="#" style="color: white;"><img src="./north-america.png" alt=""><br>NORTH AMERICA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;"><img src="./south-america.png" alt=""><br>SOUTH AMERICA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;"><img src="./europe.png" alt=""><br>EUROPE</a>
+            </li>
+            <li class="nav-item"></li>
+                <a class="nav-link" href="#" style="color: white;"><img src="./asia.png" alt=""><br>ASIA</a>\
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;"><img src="./africa.png" alt=""><br>AFRICA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;"><img src="./australia.png" alt=""><br>AUSTRALIA</a>
+              </li>
+              <li class="nav-item"></li>
+                <a class="nav-link" href="#" style="color: white;"><img src="./antartica.png" alt=""><br>ANTARTICA</a>
+              </li>
+          </ul>
+    </div>
+
+    <div class="pravalika" style="margin-top: 50px;margin-left: 230px; margin-right: 230px">
+      <img src="./tm-img-06.jpg" alt="" class="image" style="width=270px">
+      <div style="margin: 20px 50px 30px 20px;">
+        <h6 class="d-grid">ASIA RESORT HOTEL</h6>
+      <p style="color: palevioletred;">Singapore</p>
+      <p>Sed egestas,odio nec bibendum mattis,quan odio hendrerit risus,eu varius eros lacus sit amet lectus.Donec blandit luctus dictum...</p>
+    </div>
+      <div class="box">
+        <a href="#" class="price box1" style="color: white; text-decoration: none;">
+          <p class="price1"><b style="font-size: 20px; margin-top: 20px; margin-left: 20px; margin-left: 50px;" >$440</b></p>
+          <p style="font-size: small; margin-left: 10px;">CONTINUE READING</p>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="manu" style="margin-top: 50px;margin-left: 230px; margin-right: 230px">
+      <img src="./tm-img-07.jpg" alt="" class="image1" style="width=270px">
+      <div style="margin: 20px 50px 30px 20px;">
+        <h6 class="d-grid">NULLAM EGET EST A NISL</h6>
+      <p style="color: palevioletred;">Yango,Myanmar</p>
+      <p>Sed egestas,odio nec bibendum mattis,quan odio hendrerit risus,eu varius eros lacus sit amet lectus.Donec blandit luctus dictum...</p>
+    </div>
+      <div class="box">
+        <a href="#" class="price box1" style="color: white; text-decoration: none; ">
+          <p class="price1"><b style="font-size: 20px; margin-top: 20px; margin-left: 20px; margin-left: 50px;" >$450</b></p>
+          <p style="font-size: small; margin-left: 10px;">CONTINUE READING
+          </p>
+        </a>
+      </div>
+    </div>
+
+    
+
+    <div class="prion" style="margin-top: 50px;margin-left: 230px; margin-right: 230px">
+      <img src="./tm-img-05.jpg" alt="" class="image2" style="width=270px">
+      <div style="margin: 20px 50px 30px 20px;">
+        <h6 class="d-grid">PRION INTERDUM ULLAMCORPER</h6>
+      <p style="color: palevioletred;">Bangkok, Thiland</p>
+      <p>Sed egestas,odio nec bibendum mattis,quan odio hendrerit risus,eu varius eros lacus sit amet lectus.Donec blandit luctus dictum...</p>
+    </div>
+      <div class="box">
+        <a href="#" class="price box1" style="color: white; text-decoration: none; ">
+          <p class="price1"><b style="font-size: 20px; margin-top: 20px; margin-left: 20px; margin-left: 50px;" >$460</b></p>
+          <p style="font-size: small; margin-left: 10px;">CONTINUE READING
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <div class="lorem" style="margin-top: 50px;margin-left: 230px; margin-right: 230px">
+      <img src="./tm-img-04.jpg" alt="" class="image3" style="width=270px">
+      <div style="margin: 20px 50px 30px 20px;">
+        <h6 class="d-grid">LOREM IPSUM DOLOR SIT</h6>
+      <p style="color: palevioletred;">Vientiane, Laos</p><br>
+      <p>Sed egestas,odio nec bibendum mattis,quan odio hendrerit risus,eu varius eros lacus sit amet lectus.Donec blandit luctus dictum...</p>
+    </div>
+      <div class="box">
+        <a href="#" class="price box1" style="color: white; text-decoration: none; ">
+          <p class="price1"><b style="font-size: 20px; margin-top: 20px; margin-left: 20px; margin-left: 50px;" >$460</b></p>
+          <p style="font-size: small; margin-left: 10px;">CONTINUE READING
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="button">
+      <button class="btn btn" style="background-color: #69c6ba; color: white; font-size: small; border-style: solid;" >SHOW MORE PLACES</button>
+    </div>
+
+    
+      <div class="map" style="position: absolute; width: 90vw; margin-top: 50px; margin-left: 70px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60924485.415671155!2d54.552720353764634!3d21.250260899922907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3663f18a24cbe857%3A0xa9416bfcd3a0f459!2sAsia!5e0!3m2!1sen!2sin!4v1725777029398!5m2!1sen!2sin" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+
+         <div class="form" style="position: relative;">
+          <form  style=" white; width: 440px; position: absolute; top: 100px; right: 100px; padding: 20px; z-index: 1000; background-color: white;">
+            <fieldset ><br>
+            <input type="text" placeholder="Name" style="background-color:#f5f5f5; border-style: none; margin-left: 10px;">
+            <input type="email" placeholder="Email" style="background-color:#f5f5f5; border-style: none; margin-left: 10px;"><br><br>
+            <input type="text" placeholder="subject" style="width: 380px;background-color:#f5f5f5; border-style: none; margin-left: 10px;"><br><br>
+            <label for="Message"></label>
+          <textarea name="Message" id="Message" cols="48" rows="5"  placeholder="Message" style="background-color:#f5f5f5; border-style: none; margin-left: 10px;"></textarea><br>
+          <button class="btn btn" style="background-color: #69c6ba; color: white; font-size: small; border-style: solid; width: 94%; margin-left: 10px; margin-right: 10px;" >SEND MESSAGE NOW</button> <br><br>
+          </fieldset>
+          </form>
+          
+         </div>
+
+         <footer>
+          <div class="footer" style="margin-top: 550px; margin-left: 60px; margin-right: 65px; ;margin-bottom: 0px; background-color: #69c6ba; padding: 50px; text-align: center; color: white;">
+            <p>Copyright
+              <span>&#169;</span>
+              2018 Your Company. Designed by Template Mo
+            </p>
+          </div>
+         </footer>
+        
+
+
+
+
+    
+
+            
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
